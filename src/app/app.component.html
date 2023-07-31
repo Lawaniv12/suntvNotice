@@ -5,17 +5,17 @@
   </div> -->
 
   <div class="w-full">
-    <owl-carousel-o [options]="customOptions">
-      <ng-template carouselSlide><img src="assets/images/cellopack-welcome.jpg" alt=""></ng-template>
-      <ng-template carouselSlide><img src="assets/images/cellopack-welcome.jpg" alt=""></ng-template>
+    <owl-carousel-o [options]="customOptions" >
+      <ng-template carouselSlide><img src="assets/images/PG.jpg" alt=""></ng-template>
+      <ng-template carouselSlide><img src="assets/images/PG.jpg" alt=""></ng-template>
 
     </owl-carousel-o>
   </div>
 
   <section class="grid grid-cols-[60%_40%] lg:px-40 md:px-10 gap-8 px-6">
     <div class="">
-      <video class="w-fit h-[400px]" controls autoplay playsinline>
-        <source src="assets/images/student.m4v" type="video/m4v"/>
+      <video class="w-fit h-[400px]" loop muted autoplay oncanplay="this.play()" onloadedmetadata="this.muted = true">
+        <source src="assets/images/STUDENT.mp4" type="video/mp4"/>
         Your browser does not support the video tag.
       </video>
     </div>

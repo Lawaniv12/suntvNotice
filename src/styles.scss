@@ -6,6 +6,17 @@
 @import 'ngx-owl-carousel-o/lib/styles/scss/owl.carousel';
 @import 'ngx-owl-carousel-o/lib/styles/scss/owl.theme.default';
 
-html{
-  font-family: 'poppins';
-}
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+body, html {
+
+  }
+  body {
+    margin: 0;
+    padding: 0;
+    font-size: 16px !important;
+    font-family: 'Poppins', sans-serif;
+    display: flex;
+    flex-direction: column;
+    max-height: 100vh;
+   
+  }

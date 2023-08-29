@@ -1,5 +1,5 @@
-<!-- <section class="flex flex-col gap-4 py-1 max-h-[100vh]">
-  <div class="w-full h-[50%]">
+<section class="flex flex-col gap-4 py-1 max-h-[100vh]">
+  <div class="h-[45%]">
     <owl-carousel-o [options]="customOptions">
       <ng-template carouselSlide
         ><img src="assets/images/PG.jpg" alt="" class="h-[400px]"
@@ -11,11 +11,11 @@
   </div>
 
   <section
-    class="grid grid-cols-[40%_30%_30%] lg:px-34 md:px-10 gap-8 px-6 h-[50%]"
+    class="grid grid-cols-[30%_40%_20%] lg:px-34 md:px-10 gap-8 px-6 h-[50%]"
   >
     <div class="">
       <video
-        class="w-fit h-[400px]"
+        class="w-fit"
         loop
         autoplay
         oncanplay="this.play()"
@@ -27,27 +27,27 @@
     </div>
 
     <div class="flex flex-col gap-10">
-      <div class="mt-4">
-        <div class="p-2 bg-[#9B0000] rounded-lg mb-2">
-          <h1 class="text-2xl text-white">Events</h1>
+      <div class="mt-2">
+        <div class="px-2 py-1 bg-[#9B0000] rounded-lg mb-2">
+          <h1 class="text-lg text-white">Events</h1>
         </div>
         <ul class="text-lg list-disc list-inside">
-          <li class="text-base">
+          <li class="text-sm">
             Train the Trainer; SUN conducts Executive Empowerment Seminar on
             Digital Skills
           </li>
-          <li class="text-base">
+          <li class="text-sm">
             SUN faculty facilitates Staff Development Program on Followership
           </li>
         </ul>
       </div>
       <div>
         <ul class="list-disc list-inside">
-          <div class="p-2 bg-[#000B49] rounded-lg my-2">
-            <h1 class="text-2xl text-white">News Updates</h1>
+          <div class="px-2 py-1 bg-[#000B49] rounded-lg my-2">
+            <h1 class="text-lg text-white">News Updates</h1>
           </div>
-          <li class="py-2 text-lg">Admission is now Open</li>
-          <li class="text-base">PostGraduate Degree is now open</li>
+          <li class="py-2 text-sm">Admission is now Open</li>
+          <li class="text-sm">PostGraduate Degree is now open</li>
         </ul>
       </div>
     </div>
@@ -56,17 +56,17 @@
       <a
         class="twitter-timeline"
         href="https://twitter.com/SkylineUNigeria?ref_src=twsrc%5Etfw"
-        >Tweets by SkylineUNigeria</a
       >
-      <script
-        async
-        src="https://platform.twitter.com/widgets.js"
-        charset="utf-8"
-      ></script>
+        Tweets by SkylineUNigeria
+      </a>
+      <div #twitterContainer></div>
     </div>
   </section>
-  <footer class="mx-auto text-[#000B49]">
-    Copyright © 2023 Skyline University Nigeria. All Rights Reserved.
-  </footer>
-</section> -->
-<router-outlet></router-outlet>
+  <div
+    class="border border-t-red-100 border-b-0 border-l-0 border-r-0 text-center"
+  >
+    <p class="py-2 text-[#000B49] text-sm">
+      Copyright © 2023 Skyline University Nigeria. All Rights Reserved.
+    </p>
+  </div>
+</section>

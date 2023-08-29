@@ -1,0 +1,214 @@
+<div
+  class="z-50 sticky top-[0px] p-5 bg-white border-t-0 border-l-0 border-r-0 border-b border-solid border-grayscale">
+  <div class="bg-white ml-[15px] md:ml-[16px] xl:ml-0">
+    <div class="cursor-pointer flex pt-5 px-4 md:pt-0" (click)="back()">
+      <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path
+          d="M7.19959 4.02441C7.58197 3.62591 7.56892 2.99288 7.17042 2.61049C6.77193 2.22811 6.1389 2.24116 5.75651 2.63966L7.19959 4.02441ZM2 7.9987L1.27846 7.30632C0.907179 7.69324 0.907179 8.30415 1.27846 8.69107L2 7.9987ZM5.75651 13.3577C6.1389 13.7562 6.77193 13.7693 7.17042 13.3869C7.56892 13.0045 7.58197 12.3715 7.19959 11.973L5.75651 13.3577ZM2.84458 7.01986C2.2923 7.01986 1.84458 7.46757 1.84458 8.01986C1.84458 8.57214 2.2923 9.01986 2.84458 9.01986V7.01986ZM13.3333 9.01986C13.8856 9.01986 14.3333 8.57214 14.3333 8.01986C14.3333 7.46757 13.8856 7.01986 13.3333 7.01986V9.01986ZM5.75651 2.63966L1.27846 7.30632L2.72154 8.69107L7.19959 4.02441L5.75651 2.63966ZM1.27846 8.69107L5.75651 13.3577L7.19959 11.973L2.72154 7.30632L1.27846 8.69107ZM2.84458 9.01986H13.3333V7.01986H2.84458V9.01986Z"
+          fill="#6E7A91" />
+      </svg>
+      &nbsp; &nbsp;
+      <p class="text-grayscale2 m-0 font-sequel hover:font-semibold hover:text-black">
+        Back
+      </p>
+    </div>
+
+    <div class="mt-9 mb-8 md:mb-0 md:mt-4 p-5 md:flex md:justify-between md:items-center">
+      <div>
+        <p class="font-sequel text-[#141B2B] md:text-lg font-bold">SUNTV Notice Board</p>
+        <p class="font-sequel text-[#4B5466] md:text-base">
+          Edit and updates content for websites
+        </p>
+      </div>
+
+      <div>
+        <app-button [overRideButtonClass]="true" [customClass]="
+            'mx-auto block hover:bg-[#003399] font-normal rounded-xl text-white outline-none border-none bg-blue-800 text-whiteShade w-full md:w-fit sm:px-4 sm:h-10 text-sm md:px-6 py-3 md:h-12 md:text-base'
+          " [buttonText]="buttonText" (buttonClick)="submit()" [disabled]="!sunTVForm.valid">
+        </app-button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<form [formGroup]="sunTVForm">
+  <div class="mt-6 px-8 md:px-7 md:mt-5">
+    <p class="font-sequel text-[#141B2B] md:text-lg font-bold md:pb-10">
+      Page hero banner
+    </p>
+
+    <div class="block gap-3 lg:flex justify-center items-center">
+      <div [ngStyle]="{ 'background-image': 'url(' + imageSrcOne + ')' }"
+        class="banner-one rounded-xl py-5 px-8 mb-5 lg:mb-0 w-full mx-auto lg:mx-0 lg:w-[25%] lg:h-[293px] border border-[#A0AABD] border-solid">
+        <div class="text-center px-3 xl:px-5 py-12">
+          <div class="upload-file-container">
+            <img src="assets/images/plus-banner-icon.svg" alt="" class="mx-auto block" />
+            <input type="file" id="file_one" class="d-none" accept=".png, .jpg, .jpeg" (change)="handleMediaSelect($event)" />
+          </div>
+
+          <p class="pt-5 font-sequel md:text-base text-[#6E7A91]">
+            Choose an Image. Not more than 2MB in Size
+          </p>
+        </div>
+      </div>
+
+      <div [ngStyle]="{ 'background-image': 'url(' + imageSrcTwo + ')' }"
+        class="banner-two rounded-xl py-5 px-8 mb-5 lg:mb-0 w-full mx-auto lg:mx-0 lg:w-[25%] lg:h-[293px] border border-[#A0AABD] border-solid">
+        <div class="text-center px-3 xl:px-5 py-12">
+          <div class="upload-file-container">
+            <img src="assets/images/plus-banner-icon.svg" alt="" class="mx-auto block" />
+            <input type="file" id="file_two" class="d-none" accept=".png, .jpg, .jpeg" (change)="handleMediaSelect($event)" />
+          </div>
+          <p class="pt-5 font-sequel md:text-base text-[#6E7A91]">
+            Choose an Image. Not more than 2MB in Size
+          </p>
+        </div>
+      </div>
+
+      <div [ngStyle]="{ 'background-image': 'url(' + imageSrcThree + ')' }"
+        class="banner-three rounded-xl py-5 px-8 mb-5 lg:mb-0 w-full mx-auto lg:mx-0 lg:w-[25%] lg:h-[293px] border border-[#A0AABD] border-solid">
+        <div class="text-center px-3 xl:px-5 py-12">
+          <div class="upload-file-container">
+            <img src="assets/images/plus-banner-icon.svg" alt="" class="mx-auto block" />
+            <input type="file" id="file_three" class="d-none" accept=".png, .jpg, .jpeg" (change)="handleMediaSelect($event)" />
+          </div>
+          <p class="pt-5 font-sequel md:text-base text-[#6E7A91]">
+            Choose an Image. Not more than 2MB in Size
+          </p>
+        </div>
+      </div>
+
+      <div [ngStyle]="{ 'background-image': 'url(' + imageSrcFour + ')' }"
+        class="banner-four rounded-xl py-5 px-8 mb-5 lg:mb-0 w-full mx-auto lg:mx-0 lg:w-[25%] lg:h-[293px] border border-[#A0AABD] border-solid">
+        <div class="text-center px-3 xl:px-5 py-12">
+          <div class="upload-file-container">
+            <img src="assets/images/plus-banner-icon.svg" alt="" class="mx-auto block" />
+            <input type="file" id="file_four" class="d-none" accept=".png, .jpg, .jpeg" (change)="handleMediaSelect($event)" />
+          </div>
+          <p class="pt-5 font-sequel md:text-base text-[#6E7A91]">
+            Choose an Image. Not more than 2MB in Size
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <p class="font-sequel md:text-sm text-grayscale2 font-normal md:pb-6 pt-6">
+      Banner Image is in landscape mode at
+      <span class="font-semibold"> 276w by 293h px. </span>
+    </p>
+
+    <!-- <div class="mb-16">
+            <app-btn [overRideButtonClass]='true'
+                [customClass]="'block h-12 font-normal rounded-lg outline-0 border-[3px] border-[#7E98CB] bg-transparent text-[#7E98CB] w-fit sm:px-4 sm:h-6 md:px-4 py-px md:h-10 md:text-sm'"
+                buttonText='Update Media'>
+            </app-btn>
+        </div> -->
+
+    <div class="block md:flex justify-between mb-3">
+      <p class="font-sequel pt-4 md:pt-0 text-[#141B2B] md:text-lg font-bold">
+        Page Contents
+      </p>
+
+      <div class="flex gap-x-2 items-center">
+        <!-- <p class="font-sequel md:text-base text-[#4B5466] pt-2 md:pt-3">
+          Show/hide
+        </p> -->
+
+        <!-- <label class="switch">
+          <input type="checkbox" formControlName="event_visible" #input checked (click)="slide(input)" />
+          <span class="slider round"></span>
+        </label> -->
+      </div>
+    </div>
+
+    <div class="lg:mt:10 mt-6 mb-6 lg:mb-16 bg-darkGray rounded-xl flex items-center justify-between pr-4">
+      <div class="w-4/5">
+        <p class="pl-3 md:pl-5 mb-2 pt-2 text-[#6E7A91]">
+          Events <span class="text-appRed">*</span>
+        </p>
+        <input type="text" id="title"
+          class="h-6 text-ellipsis overflow-hidden ... border-0 py-2 placeholder:text-gray-300 placeholder:font-light outline-0 font-sequel w-full text-[#141B2B] bg-slate-50 font-normal pt-5 pb-5 pl-3 md:pl-5 mb-1 focus:outline-none md:text-base rounded-lg"
+          formControlName="eventOne" placeholder="Event One" />
+          <input type="text" id="title"
+          class="h-6 text-ellipsis overflow-hidden ... border-0 py-2 placeholder:text-gray-300 placeholder:font-light outline-0 font-sequel w-full text-[#141B2B] bg-slate-50 font-normal mb-1 pt-5 pb-5 pl-3 md:pl-5 focus:outline-none md:text-base rounded-lg"
+          formControlName="eventTwo" placeholder="Event Two"/>
+          <input type="text" id="title"
+          class="h-6 text-ellipsis overflow-hidden ... border-0  py-2 placeholder:text-gray-300 placeholder:font-light outline-0 font-sequel w-full text-[#141B2B] bg-slate-50 font-normal pt-5 pb-5 pl-3 md:pl-5 focus:outline-none md:text-base rounded-lg"
+          formControlName="eventThree" placeholder="Event Three"/>
+      </div>
+
+      <div>
+        <img src="assets/images/closeIconX.svg" alt="" class="cursor-pointer" (click)="clearTitle()" />
+      </div>
+    </div>
+
+    <div class="lg:mt:10 mt-6 mb-6 lg:mb-16 bg-darkGray rounded-xl flex items-center justify-between pr-4">
+      <div class="w-4/5">
+        <p class="pl-3 md:pl-5 mb-0 pt-2 text-[#6E7A91]">
+          News Updates <span class="text-appRed">*</span>
+        </p>
+        <input type="text" id="description"
+          class="h-6 text-ellipsis overflow-hidden ... border-0 py-2 placeholder:text-gray-300 placeholder:font-light outline-0 font-sequel w-full text-[#141B2B] bg-slate-50 font-normal pt-5 pb-5 pl-3 md:pl-5 mb-1 focus:outline-none md:text-base rounded-lg"
+          formControlName="newsUpdateOne" placeholder="First News Update"/>
+          <input type="text" id="description"
+          class="h-6 text-ellipsis overflow-hidden ... border-0 py-2 placeholder:text-gray-300 placeholder:font-light outline-0 font-sequel w-full text-[#141B2B] bg-slate-50 font-normal pt-5 pb-5 pl-3 md:pl-5 mb-1 focus:outline-none md:text-base rounded-lg"
+          formControlName="newsUpdateTwo" placeholder="Second News Update"/>
+          <input type="text" id="description"
+          class="h-6 text-ellipsis overflow-hidden ... border-0 py-2 placeholder:text-gray-300 placeholder:font-light outline-0 font-sequel w-full text-[#141B2B] bg-slate-50 font-normal pt-5 pb-5 pl-3 md:pl-5 mb-1 focus:outline-none md:text-base rounded-lg"
+          formControlName="newsUpdateThree" placeholder="Third News Update" />
+      </div>
+
+      <div>
+        <img src="assets/images/closeIconX.svg" alt="" class="cursor-pointer" (click)="clear()" />
+      </div>
+    </div>
+
+    <div>
+      <p class="font-sequel text-[#141B2B] md:text-lg font-bold md:pb-10">
+        Page Advertisement Video
+      </p>
+
+      <div [ngStyle]="{ 'background-image': 'url(' + imageSrc + ')' }"
+        class="banner-advert border-2 border-[#A0AABD] border-dashed rounded-2xl py-3">
+        <div class="mx-auto text-center py-9 mb-3">
+          <p class="font-sequel text-black md:text-base font-normal">
+            You can change your your video
+          </p>
+
+          <div
+            class="mx-auto block font-normal rounded-xl outline-none border-none text-whiteShade w-fit sm:px-4 sm:h-10 text-sm md:px-6 py-3 md:h-12 md:text-base">
+            <div class="upload-file-container">
+              <label for="file"
+                class="mx-auto px-4 block hover:bg-[#003399] font-normal rounded-xl text-white outline-none border-none bg-blue-800 text-whiteShade w-fit sm:px-4 sm:h-10 text-sm md:px-6 py-3 md:h-12 md:text-base">
+                Choose a File
+              </label>
+              <input type="file" id="file" class="d-none" accept=".png, .jpg, .jpeg, .mp4" (change)="handleMediaSelect($event)" />
+            </div>
+          </div>
+        </div>
+      </div>
+      <p class="font-sequel  text-grayscale2 md:text-sm font-normal md:pb-6 pt-6">
+        Video should be uploaded here
+        <!-- <span class="font-semibold"> 1213w by 448h px. </span> -->
+      </p>
+    </div>
+
+
+    <div
+      class="flex mb-6 p-3 items-center justify-between border-solid border-2 border-[#D8DCE9] md:px-10 md:py-7 rounded-2xl md:mb-8"
+      *ngFor="let career of allCareer">
+      <div>
+        <p class="font-sequel text-xs md:text-sm text-[#003399] font-semibold ">
+          {{career.job_title}}
+        </p>
+      </div>
+
+      <!-- <div>
+        <app-button [overRideButtonClass]="true" [customClass]="
+            'block h-8 font-normal rounded-lg outline-none text-white border hover:bg-[#47C97E] hover:text-white border-[#47C97E] bg-transparent text-[#002A80] w-fit sm:px-4 sm:h-6 text-xs md:text-sm md:px-6 py-px md:h-12 md:text-base'
+          " buttonText="edit/update" (buttonClick)="edit(career.id)">
+        </app-button>
+      </div> -->
+    </div>
+  </div>
+</form>

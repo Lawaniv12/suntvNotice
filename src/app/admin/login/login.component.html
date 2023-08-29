@@ -1,0 +1,96 @@
+<div class="flex flex-col h-screen">
+  <div class="flex justify-between p-4 bg-[#f9fafc]">
+    <img src="assets/images/logo1.webp" alt="" class="h-14" />
+
+    <div class="flex items-center">
+      <div class="flex gap-2 items-end">
+        <img src="assets/images/user.png" alt="" class="h-6" />
+        <p>MCD</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="flex-1 relative pb-20 md:pb-36 md:pt-10">
+    <div
+      class="flex flex-col md:p-4 p-2 w- mx-auto space-y-2 mt-2 w-[90%] max-w-[496px]"
+    >
+      <div class="text-center">
+        <div class="text-3xl text-[#002a80] font-sequel-bold mt-6">
+          Content Management System
+        </div>
+        <div class="font-sequel text-base mt-4 text-[#4b5466]">
+          Edit and Update Website Content
+        </div>
+      </div>
+
+      <div>
+        <form
+          action=""
+          [formGroup]="loginForm"
+          (submit)="login()"
+          class="bg-white px-4 md:px-10 py-7 md:py-12 rounded-2xl border border-solid border-[#e2eafc]"
+        >
+          <div class="mb-5">
+            <div class="mb-1 bg-[#f7f8fc] rounded-lg relative">
+              <span class="absolute left-4 top-5">
+                <img src="assets/images/email.svg" alt="email-icon" />
+              </span>
+              <div class="pl-14 mb-0 pt-3 font-sequel text-[#6e7a91]">
+                Email
+              </div>
+              <input
+                type="text"
+                placeholder="admin@tv.sun.edu.ng"
+                class="h-8 border-0 outline-0 rounded-lg bg-[#f7f8fc] placeholder:font-thin font-sequel w-full pl-14 px-5 pb-5 pt-3 focus:outline-none font-semibold"
+                formControlName="email"
+              />
+            </div>
+            <span *ngIf="f['email'].touched && f['email'].invalid">
+              <p
+                class="pl-5 text-[red] text-[10px]"
+                *ngIf="f['email'].errors!['pattern']"
+              >
+                Enter a valid email address
+              </p>
+            </span>
+          </div>
+          <div class="mb-3">
+            <div class="mb-1 bg-[#f7f8fc] rounded-lg relative">
+              <span class="absolute left-4 top-5">
+                <img src="assets/images/lock.svg" alt="password" class="h-6" />
+              </span>
+              <div class="pl-14 mb-0 pt-3 font-sequel text-[#6e7a91]">
+                Password
+              </div>
+              <input
+                [type]="passWordType"
+                placeholder="password"
+                class="h-8 border-0 outline-0 rounded-lg bg-[#f7f8fc] placeholder:font-thin font-sequel w-full pl-14 px-5 pb-5 pt-3 focus:outline-none font-semibold"
+                formControlName="password"
+              />
+              <span class="absolute right-4 top-5">
+                <img
+                  [src]="passwordImg"
+                  alt=""
+                  (click)="toggleEye()"
+                  class="h-6"
+                />
+              </span>
+            </div>
+            <app-button
+              [overRideButtonClass]="true"
+              [buttonText]="'Login'"
+
+              [customClass]="
+                'hover:bg-[#003399] text-white text-normal mt-6 w-full p-5 rounded-lg bg-[#CC2329] border-0 outline-0 text-center items-center flex'
+              "
+            >
+            </app-button>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- [disabled]="loginForm.invalid" -->
